@@ -41,7 +41,8 @@
     "typescript": "^4.4.3"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "pokemon-analyzer": "node ./build/src/cli.js pokemon-analyzer"
   },
   "repository": {
     "type": "git",
