@@ -1,6 +1,6 @@
 {
   "name": "pokemon-data-analyzer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A small service that will determine the average weight and height of a given subset of Pokémon.",
   "main": "./build/src/cli.js",
   "bin": {
