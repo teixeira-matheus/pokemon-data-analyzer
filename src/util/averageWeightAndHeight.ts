@@ -16,9 +16,16 @@ export type AverageStatsByType = {
 }
 
 export function averageWeightAndHeight(pokemons: GetPokemon[]): AverageStats{
-  const averageWeight: number = Object.values(pokemons).reduce((t, {weight}) => t + weight, 0) / pokemons.length;
-  const averageHeight: number = Object.values(pokemons).reduce((t, {height}) => t + height, 0) / pokemons.length;
-  return {averageWeight, averageHeight, count: pokemons.length};
+  if(pokemons.length > 0){
+    const averageWeight: number = (Object.values(pokemons).reduce((t, {weight}) => t + weight, 0) / pokemons.length);
+    const averageHeight: number = (Object.values(pokemons).reduce((t, {height}) => t + height, 0) / pokemons.length);
+    return {averageWeight, averageHeight, count: pokemons.length};
+  }
+  return {
+    averageWeight: 0,
+    averageHeight: 0,
+    count: 0
+  }
 }
 
 export function averageWeightAndHeightByType(pokemons: GetPokemon[]): AverageStatsByType[]{

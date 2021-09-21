@@ -2,9 +2,16 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.averageWeightAndHeightByType = exports.averageWeightAndHeight = void 0;
 function averageWeightAndHeight(pokemons) {
-    const averageWeight = (Object.values(pokemons).reduce((t, { weight }) => t + weight, 0) / pokemons.length) | 0;
-    const averageHeight = (Object.values(pokemons).reduce((t, { height }) => t + height, 0) / pokemons.length) | 0;
-    return { averageWeight, averageHeight, count: pokemons.length };
+    if (pokemons.length > 0) {
+        const averageWeight = (Object.values(pokemons).reduce((t, { weight }) => t + weight, 0) / pokemons.length);
+        const averageHeight = (Object.values(pokemons).reduce((t, { height }) => t + height, 0) / pokemons.length);
+        return { averageWeight, averageHeight, count: pokemons.length };
+    }
+    return {
+        averageWeight: 0,
+        averageHeight: 0,
+        count: 0
+    };
 }
 exports.averageWeightAndHeight = averageWeightAndHeight;
 function averageWeightAndHeightByType(pokemons) {

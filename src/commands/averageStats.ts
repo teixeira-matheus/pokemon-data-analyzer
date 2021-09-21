@@ -61,7 +61,7 @@ export const handler = async (argv: Arguments<Options>): Promise<void> => {
                           `------------------------------------------------------------\n`);
       });
     }
-  
+
     console.timeEnd('Execution Time');
     process.exit(0);
   }catch(e){
