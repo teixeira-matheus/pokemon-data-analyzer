@@ -21,7 +21,7 @@ type Options = {
 };
 
 export const command: string = 'pokemon-analyzer';
-export const desc: string = 'pokemon-analyzer -offset 800 -limit 50';
+export const desc: string = 'pokemon-analyzer --offset 800 --limit 50 --sortByType';
 
 export const builder: CommandBuilder<Options, Options> = (yargs) =>
   yargs
@@ -47,7 +47,7 @@ export const handler = async (argv: Arguments<Options>): Promise<void> => {
     process.stdout.write(`Limit: ${limit} / Offset: ${offset}\n`);
 
     const averageResults: AverageStats = averageWeightAndHeight(pokemonsDetails);
-    process.stdout.write(`Average metrics in all pokémons (${averageResults.count} analyzed) \n`+
+    process.stdout.write(`Average metrics in all pokémons (${averageResults.count} analyzed)\n`+
                         `Average weight: ${(averageResults.averageWeight/10).toFixed(2)}kg\n`+
                         `Average height: ${(averageResults.averageHeight/10).toFixed(2)}m\n`+
                         `=============================================================\n\n`);

@@ -1,4 +1,4 @@
-import { pokemonMockData } from '../../tests/pokemonMockData';
+import { pokemonMockData } from '../../tests/';
 import {
   AverageStats,
   AverageStatsByType,
