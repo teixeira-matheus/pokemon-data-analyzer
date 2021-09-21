@@ -10,10 +10,11 @@ $ npm install
 ## Usage
 Windows/Linux
 ```bash
-$ ./build/cli.js pokemon-analyzer --limit 1000 --offset 100
+$ ./build/cli.js pokemon-analyzer --limit 1000 --offset 100 --sortByType
 ```
 MacOS
 ```bash
-$ node ./build/cli.js pokemon-analyzer --limit 1000 --offset 100
+$ node ./build/cli.js pokemon-analyzer --limit 1000 --offset 100 --sortByType
 ```
 Both parameters (limit and offset) are required
+sortByType flag is optional, if provided will add additional data sorted by each pokémon type(distinct)
