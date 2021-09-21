@@ -2,9 +2,9 @@
 A small service that will determine the average weight and height of a given subset of Pokémon.
 
 ## Installation
-On run the project directory
+On run the project directory (npm required)
 ```bash
-$ yarn install
+$ npm install
 ```
 
 ## Usage
